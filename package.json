@@ -4,10 +4,17 @@
   "private": true,
   "dependencies": {
     "axios": "^0.19.0",
+    "grommet": "^2.8.0",
+    "polished": "^3.4.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+<<<<<<< HEAD
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0"
+=======
+    "react-scripts": "3.2.0",
+    "styled-components": "^4.4.1"
+>>>>>>> aa28523b98562e5c0fe3514c02919072c649dc71
   },
   "scripts": {
     "start": "react-scripts start",
