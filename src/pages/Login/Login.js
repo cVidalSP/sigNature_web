@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
-import { onSignIn, isSignedIn } from '../../services/Storage';
+import { onSignIn } from '../../services/Storage';
 import Service from '../../services/BaseAxios';
-import { TextInput, Button } from 'grommet';
 
 export default function Login() {
     const [user, setUser] = useState('andre@gmail.com');
@@ -16,14 +15,10 @@ export default function Login() {
          }).then(values => {
              onSignIn(values.token);
              Service.setHeader(values.token);
-             console.log(values)
+
          }).catch(err => {
              console.log(err);
-         }).finally(function () {
-             isSignedIn().then(function (res) {
-                 console.log(res)
-             })
-         });
+         })
     }
 
     function handleSubmit(){
@@ -54,7 +49,7 @@ export default function Login() {
                     onChange={event => setPassword(event.target.value)}
                 />
 
-                <button className="btn" type="submit">Cadastrar</button>
+                <button className="btn" type="submit" >Cadastrar</button>
 
             </form>
         </div> 
