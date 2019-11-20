@@ -26,23 +26,38 @@ export default function Login() {
          });
     }
 
+    function handleSubmit(){
+        login();
+    }
+
     return (
-        <>
-            <TextInput
-                placeholder="Usuario"
-                value={user}
-                onChange={event => setUser(event.target.value)}
-            />
-            <TextInput
-                placeholder="Password"
-                value={password}
-                onChange={event => setPassword(event.target.value)}
-            />
-            <Button
-                label="Enviar"
-                onClick={login}
-            />
-        </>
+        <div className="mainContent">
+            <p>
+                Olá! Seja <strong>bem vindo</strong>
+            </p>
+            <form onSubmit={handleSubmit}>
+                <label htmlFor="user">Usuário</label>
+                <input 
+                    id="nomeUsuario" 
+                    type="text" 
+                    placeholder="Nome da petição"
+                    value={user}
+                    onChange={event => setUser(event.target.value)}
+                />
+
+                <label htmlFor="password">Senha</label>
+                <input 
+                    id="password" 
+                    type="text" 
+                    placeholder="Descrição da petição"
+                    value={password}
+                    onChange={event => setPassword(event.target.value)}
+                />
+
+                <button className="btn" type="submit">Cadastrar</button>
+
+            </form>
+        </div> 
     );
 }
 
