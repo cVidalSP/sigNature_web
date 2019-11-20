@@ -15,7 +15,7 @@ export default function Login() {
          }).then(values => {
              onSignIn(values.token);
              Service.setHeader(values.token);
-
+            // ----- colocar o a logica para ir pro dashboard
          }).catch(err => {
              console.log(err);
          })
