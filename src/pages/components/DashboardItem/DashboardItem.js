@@ -1,17 +1,13 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
-import Service from '../../../services/BaseAxios';
 import './DashboardItem.css';
 
-export default function Dashboard(){
+export default function DashboardItem(){
 
     return(
-        <div className="mainContent">
-            <p>
-                Petições ja cadastradas:
-            </p>
-
-        </div>
+        <p>
+            Oi
+        </p>
     )
 }
 
