@@ -5,10 +5,16 @@ import './DashboardItem.css';
 export default function DashboardItem({data}){
 
     return(
-        <p>
-            {console.log(data)}
-            Oi
-        </p>
+        <div className="mainContainer">
+            <div className="header">
+
+            </div>
+            
+            <div className="footer"> 
+                <p>{}</p>
+                <p>{}</p>
+            </div>
+        </div>
     )
 }
 
