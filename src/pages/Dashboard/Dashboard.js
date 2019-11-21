@@ -38,26 +38,25 @@ export default function Dashboard(){
     ]
 
     useEffect(() => {
-        setPetitions(data);
-        // getPetitions()
+        getPetitions()
     }, []);
 
     function getPetitions() {
-        Service.get('http://localhost:3333/petitions').then(function (value) {
-            setPetitions(value.data)
-        });
+        // Service.get('http://localhost:3333/petitions').then(function (value) {
+        //     setPetitions(value.data)
+        // });
+        setPetitions(data);
     }
-
-    useEffect(() => getPetitions(), []);
 
     return(
         <div className="mainContent">
             <p>
-                Petições ja cadastradas:
+                Petições ja cadastradas
             </p>
-            {petitions.map(item => (
-                <DashboardItem data={item} />
-            ))}
+                {petitions.map(item => (
+                    <DashboardItem data={item} />
+                )
+                )}
         </div>
     )
 }

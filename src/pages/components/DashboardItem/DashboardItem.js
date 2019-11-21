@@ -1,18 +1,22 @@
-import React, { useEffect, useState } from 'react';
-
+import React from 'react';
 import './DashboardItem.css';
 
 export default function DashboardItem({data}){
-
     return(
-        <div className="mainContainer">
-            <div className="header">
-
+        <div className="card">
+            <div className="cardHeader">
+                <p>
+                    {data.name}
+                </p>
+                <p>
+                    {`Nr. de votos: ${data.qtAss}`}
+                </p>
             </div>
-            
-            <div className="footer"> 
-                <p>{}</p>
-                <p>{}</p>
+            <img src={data.image} className="cardImage"/>
+            <div className="cardFooter">
+                <p>
+                    {data.desc}
+                </p>
             </div>
         </div>
     )
